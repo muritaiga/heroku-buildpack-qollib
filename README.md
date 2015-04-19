@@ -13,7 +13,7 @@ To use this buildpack, you should prepare .buildpacks file that contains this bu
     ...
     
     $ cat .buildpacks
-    https://github.com/shunjikonishi/heroku-buildpack-qollib
+    https://github.com/muritaiga3/heroku-buildpack-qollib
     https://github.com/heroku/heroku-buildpack-ruby
 
     $ heroku create --buildpack https://github.com/ddollar/heroku-buildpack-multi
