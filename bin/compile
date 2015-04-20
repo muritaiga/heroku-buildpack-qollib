@@ -10,8 +10,8 @@ VENDOR_DIR="vendor"
 DOWNLOAD_URL="https://dl.dropboxusercontent.com/u/50928933/afdgtvvu875dghj4wghjkklf1pyhfd2/qollibs.tar"
 
 echo "-----> Install ld-linux"
-sudo apt-get update
-sudo apt-get install -y libc6-i386
+apt-get update
+apt-get install -y libc6-i386
 
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
