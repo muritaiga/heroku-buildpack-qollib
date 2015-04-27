@@ -19,7 +19,7 @@ cd $VENDOR_DIR | mkdir -p $LIBRARY_DIR
 curl --proxy $PROXY_URL $DOWNLOAD_URL -O
 chmod +x RM20BspLibTb
 
-echo "exporting PATH and LIBRARY_PATH" | indentexit
+echo "exporting PATH and LIBRARY_PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/qollib.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/qollib"' >> $PROFILE_PATH
