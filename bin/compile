@@ -7,19 +7,19 @@ indent() {
 echo "-----> Install RM20BspLibTb"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
+LIBRARY_DIR="qollib"
 DOWNLOAD_URL="https://s3.amazonaws.com/qolpilotlibs/RM20BspLibTb"
 PROXY_URL="http://quotaguard2624:87774ce65362@us-east-1-static-brooks.quotaguard.com:9293"
 env
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 echo "PROXY_URL" $PROXY_URL | indent
 
-cd $BUILD_DIR
-mkdir -p $VENDOR_DIR
-cd $VENDOR_DIR
+cd $BUILD_DIR | mkdir -p $VENDOR_DIR
+cd $VENDOR_DIR | mkdir -p $LIBRARY_DIR
 curl --proxy $PROXY_URL $DOWNLOAD_URL -O
 chmod +x RM20BspLibTb
 
-echo "exporting PATH and LIBRARY_PATH" | indent
+echo "exporting PATH and LIBRARY_PATH" | indentexit
 PROFILE_PATH="$BUILD_DIR/.profile.d/qollib.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/qollib"' >> $PROFILE_PATH
