@@ -6,10 +6,9 @@ indent() {
 
 echo "-----> Install RM20BspLibTb"
 BUILD_DIR=$1
-ENV_DIR=$3
 VENDOR_DIR="vendor"
 LIBRARY_DIR="qollib"
-
+env
 echo "--> ENV RECEIVE_DATA =" $RECEIVE_DATA | indent
 echo $RECEIVE_DATA >> env.json
 DOWNLOAD_URL=$(cat env.json | jq .push_metadata.env.QOLLIBS_URL -r)

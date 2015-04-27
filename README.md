@@ -13,6 +13,7 @@ To use this buildpack, you should prepare .buildpacks file that contains this bu
     ...
     
     $ cat .buildpacks
+    https://github.com/muritaiga3/heroku-buildpack-apt
     https://github.com/muritaiga3/heroku-buildpack-qollib
     https://github.com/heroku/heroku-buildpack-ruby
 
@@ -20,10 +21,3 @@ To use this buildpack, you should prepare .buildpacks file that contains this bu
 
     $ git push heroku master
     ...
-
-You can verify installing ffmpeg by following command.
-
-    $ heroku run " -version"
-
-Hacking
--------
