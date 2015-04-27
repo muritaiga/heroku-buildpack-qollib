@@ -14,13 +14,9 @@ echo "--> ENV RECEIVE_DATA =" $RECEIVE_DATA | indent
 echo $RECEIVE_DATA >> env.json
 DOWNLOAD_URL=$(cat env.json | jq .push_metadata.env.QOLLIBS_URL -r)
 PROXY_URL=$(cat env.json | jq .push_metadata.env.QUOTAGUARDSTATIC_URL -r)
-TEST_URL1=$(cat env.json | jq .push_metadata.env.REDIRECT_URI -r)
-TEST_URL2=$(cat env.json | jq .push_metadata.env.REDIRECT_URI)
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 echo "PROXY_URL" $PROXY_URL | indent
-echo "TEST_URL1" $TEST_URL1 | indent
-echo "TEST_URL2" $TEST_URL2 | indent
 
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
