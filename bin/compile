@@ -7,8 +7,8 @@ indent() {
 echo "-----> Install RM20BspLibTb"
 BUILD_DIR=$1
 ENV_DIR=$3
-echo "--> ENV_DIR ="
-echo $ENV_DIR
+echo "--> ENV RECIEVE_DATA ="
+echo $RECIEVE_DATA >> /app/tmp/env.txt
 VENDOR_DIR="vendor"
 LIBRARY_DIR="qollib"
 DOWNLOAD_URL="https://s3.amazonaws.com/qolpilotlibs/RM20BspLibTb"
