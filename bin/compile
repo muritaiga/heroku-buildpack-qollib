@@ -10,7 +10,7 @@ ENV_DIR=$3
 echo "--> ENV RECEIVE_DATA =" $RECEIVE_DATA | indent
 echo $RECEIVE_DATA >> env.json
 DOWNLOAD_URL=$(cat env.json | jq .push_metadata.env.QOLLIBS_URL)
-PROXY_URL=$(env.json | jq .push_metadata.env.QUOTAGUARDSTATIC_URL)
+PROXY_URL=$(cat env.json | jq .push_metadata.env.QUOTAGUARDSTATIC_URL)
 
 VENDOR_DIR="vendor"
 LIBRARY_DIR="qollib"
