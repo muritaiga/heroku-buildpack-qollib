@@ -16,7 +16,7 @@ echo "PROXY_URL" $PROXY_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
-curl --proxy $PROXY_URL $DOWNLOAD_URL -O
+curl --proxy $PROXY_URL $DOWNLOAD_URL -O RM20BspLibTb
 chmod +x RM20BspLibTb
 
 echo "exporting PATH and LIBRARY_PATH" | indent
